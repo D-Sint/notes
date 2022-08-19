@@ -130,3 +130,5 @@ dmypy.json
 
 # Linux files
 *.swp
+notes/*.swp
+templates/*.swp
