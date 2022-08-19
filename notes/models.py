@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Note(models.Model):
     name = models.CharField(max_length=150)
-    category = models.ManyToManyField(Category)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True)
     text = models.TextField(max_length=5000)
     create_date = models.DateTimeField(default=django_tz.now, blank=True)
 
